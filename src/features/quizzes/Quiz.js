@@ -18,11 +18,16 @@ export default function Quiz () {
   return (
     <section>
       <h1>{quiz.name}</h1>
-      <ul className="cards-list">
+      {/* <ul className="cards-list">
         {quiz.cardIds.map((id) => (
           <Card key={id} id={id} />
         ))}
-      </ul>
+      </ul> */}
+      <section className="cards-container">
+        {quiz.cardIds.map((id) => (
+          <Card key={id} id={id} />
+        ))}
+      </section>
       <Link to={ROUTES.newQuizRoute()} className="button center">
         Create a New Quiz
       </Link>

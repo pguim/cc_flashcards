@@ -8,10 +8,13 @@ export default function Card ({ id }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
-    <li>
+    <button className={`card ${flipped ? 'turn' : ''}`} onClick={(e) => setFlipped(!flipped)}>
+      <span>{flipped ? card.back : card.front}</span>
+    </button>
+    /* {/* <li>
       <button className="card" onClick={(e) => setFlipped(!flipped)}>
         {flipped ? card.back : card.front}
       </button>
-    </li>
+    </li> */
   );
 }
